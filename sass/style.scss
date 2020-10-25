@@ -12,14 +12,16 @@
 }
 
 .wrapper{
-    background: hsl(257, 40%, 49%) url(../images/bg-mobile.svg) 0/ cover;
+    background: hsl(257, 40%, 49%) url(../images/bg-mobile.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
     max-width: 375px;
     margin: 0 auto;
 }
 
 .logo{
     padding: 25px 0 0 25px;
-    margin-bottom: 10px;
+    margin-bottom: 35px;
     img{
         width: 105px;
     }
@@ -40,8 +42,9 @@
     }
 
     h1{
+        font-family: "poppins" , serif;
         font-size: 25px;
-        font-weight: 400;
+        font-weight: 700;
         margin-bottom: 10px;
     }
 
@@ -75,5 +78,57 @@
             padding: 2px;
             margin-right: 3px;
         }
+    }
+}
+
+@media only screen and (min-width: 578px) {
+    .wrapper{
+        background: hsl(257, 40%, 49%) url(../images/bg-desktop.svg) 0/ contain no-repeat;
+        max-width: 1440px;
+        height: 100vh;
+    }
+    .logo{
+        padding: 40px 0 0 40px;
+        img{
+            width: 200px;
+        }
+    }
+    .content{
+        flex-direction: row;
+        align-items: stretch;
+        padding: 36px;
+        text-align: center;
+        .image{
+            width: 100%;
+        }
+        h1{
+            max-width: 300px;
+        }
+        p{
+            font-size: 12px;
+            max-width: 352px;
+        }
+        button{
+            width: 130px;
+        }
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 40px 40px 0px 40px;
+        width: 100%;
+    }
+    .social{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-bottom: 40px;
+    }
+    .head{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
     }
 }
